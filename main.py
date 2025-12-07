@@ -1,6 +1,9 @@
+import random
+
 def main():
     raw_list = read_file()
     ranges = calculate_values(raw_list)
+    random = generate_random()
 
 # Read the CSV file input
 def read_file():
@@ -39,10 +42,10 @@ def calculate_values(raw_list):
 
 # generate the random values.
 def generate_random():
-    pass
+    return random.random()
 
 # actually pick the team given the random input
-def pick_team(teams, ranges, rand):
+def pick_team(ranges, rand):
     pass
 
 main()
