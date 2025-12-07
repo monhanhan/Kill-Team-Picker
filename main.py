@@ -4,6 +4,8 @@ def main():
     raw_list = read_file()
     ranges = calculate_values(raw_list)
     random = generate_random()
+    selection = pick_team(ranges, random)
+    print(raw_list[selection][0])
 
 # Read the CSV file input
 def read_file():
@@ -46,6 +48,10 @@ def generate_random():
 
 # actually pick the team given the random input
 def pick_team(ranges, rand):
-    pass
-
+    if rand < ranges[0]:
+        return 0
+    
+    for i in range(1, len(ranges)):
+        if rand <= ranges[i] and rand > ranges[i - 1]:
+            return i
 main()
