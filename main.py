@@ -1,5 +1,6 @@
 def main():
     raw_list = readFile()
+    print(raw_list)
 
 # Read the CSV file input
 def readFile():
@@ -7,7 +8,7 @@ def readFile():
     raw_list = []
 
     for line in in_file:
-        raw_list.append(line.split(", "))
+        raw_list.append(line.strip().split(", "))
 
     in_file.close()
     return raw_list
