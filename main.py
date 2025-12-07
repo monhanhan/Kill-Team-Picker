@@ -9,6 +9,7 @@ def readFile():
     for line in in_file:
         raw_list.append(line.split(", "))
 
+    in_file.close()
     return raw_list
 
 # Take the input from the file and process it into the arrays that will be output
